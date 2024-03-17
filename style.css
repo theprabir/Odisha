@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #FEF8DD;
+}
+
+header .nav{
+    padding: 20px 20px;
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.5));
+    position: fixed;
+    z-index: 99;
+}
+
+header .nav img{
+    height: 50px;
+}
+
+header .nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-right: 20px;
+}
+
+header .nav ul li{
+    padding-left: 80px;
+    padding-top: 15px;
+}
+
+header .nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    /* color: #4283a1; */
+    color: #fff;
+    position: relative;
+}
+
+header .nav ul li a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+header .nav ul li a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+header .content .headings{
+    position: absolute;
+    z-index: 99;
+    top: 120px;
+    left: 50px;
+}
+
+header .content .headings h2{
+    font-family: "Style Script", cursive;
+    position: absolute;
+    font-size: 35px;
+    letter-spacing: 5px;
+    top: 10px;
+    left: 50px;
+}
+
+header .content .headings h1{
+    font-family: "Kaushan Script", cursive;
+    font-size: 250px;
+    top: 20px;
+    position: relative;
+}
+
+header .content .headings h3{
+    font-family: "Yesteryear", cursive;
+    font-size: 35px;
+    top: 330px;
+    left: 50px;
+    position: absolute;
+}
+
+header .content .headings .socials a{
+    padding: 10px 15px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #000;
+    filter: drop-shadow(3px 3px 3px #222);
+    font-family: "Montserrat", sans-serif;
+    border-radius: 20px;
+    top: 60px;
+    left: 40px;
+    position: relative;
+}
+
+header .content .headings .socials a:hover{
+    filter: drop-shadow(1px 1px 1px #222);
+}
+
+.image-slider {
+    width: 800px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    left: 566px;
+    z-index: 0;
+}
+.image-slider img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.image-slider img.active {
+    opacity: 1;
+}
